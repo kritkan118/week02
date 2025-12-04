@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบสอบถาม</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+     body{
+        text-align: center;
+        }
+     table {
+        background-color:rgb(62, 247, 15);
+        }
+     span.title {
+        text-align: left;
+       }
+     span.student ID, name, sex, color, fruit, .food {
+        display: inline-block;
+        width: 120px;
+        text-align: left;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <h2>แบบสอบถาม</h2>
+    <hr>
+    <form action="submit_form.php" method="post">
+        
+        <table align="center" cellpadding="5">
+            <tr>
+                <td><span class="label">รหัสนักศึกษา:</span></td>
+                <td><input type="text" name="student_id" placeholder="กรอกรหัสนักศึกษา" required></td>
+            </tr>
+            <tr>
+                <td><span class="label">ชื่อ-นามสกุล:</span></td>
+                <td><input type="text" name="name" placeholder="กรอกชื่อ-นามสกุล" required></td>
+            </tr>
+            <tr>
+                <td><span class="label">เพศ:</span></td>
+                <td>
+                    <input type="radio" name="sex" value="ชาย" id="sex_male"> <label for="sex_male">ชาย</label>
+                    <input type="radio" name="sex" value="หญิง" id="sex_female"> <label for="sex_female">หญิง</label>
+                </td>
+            </tr>
+        </table>
+    </form>
+                <label for="faculty">สังกัดคณะ</label>
+                <br>
+        <select>
+            <option value="science">วิทยาศาสตร์</option>
+            <option value="computer_science">วิทยาการคอมพิวเตอร์</option>
+            <option value="arts">ครุศาสตร์</option>
+            <option value="business">บริหารธุรกิจและการจัดการ</option>
+            <option value="humanities">มนุษยศาสตร์</option>
+            <option value="it">เทคโนโลยีอุตสาหกรรม</option>
+            <option value="agriculture">เกษตรศาสตร์</option>
+            <option value="nursing">พยาบาลศาสตร์</option>
+            <option value="public_health">สาธารณสุขศาสตร์</option>
+            <option value="traditional_medicine">แพทย์แผนไทยและทางเลือก</option>
+            <option value="education">ศึกษาศาสตร์</option>
+        </select>
+            <br><br>
+        <label>สีที่ชื่นชอบ</label><br>
+        <input type="checkbox" id="red_color" name="favorite_color[]" value="red">
+        <label for="red_color">สีแดง</label>
+        <input type="checkbox" id="green_color" name="favorite_color[]" value="green">
+        <label for="green_color">สีเขียว</label>
+        <input type="checkbox" id="blue_color" name="favorite_color[]" value="blue">
+        <label for="blue_color">สีน้ำเงิน</label><br><br>
+
+        <label>ผลไม้ที่ชื่นชอบ</label><br>
+        <input type="checkbox" id="mango" name="favorite_fruit[]" value="mango">
+        <label for="mango">มะม่วง</label>
+        <input type="checkbox" id="custard_apple" name="favorite_fruit[]" value="custard_apple">
+        <label for="custard_apple">น้อยหน่า</label>
+        <input type="checkbox" id="rambutan" name="favorite_fruit[]" value="rambutan">
+        <label for="rambutan">ทุเรียน</label><br>
+        <input type="checkbox" id="salak" name="favorite_fruit[]" value="salak">
+        <label for="salak">สละ</label>
+        <input type="checkbox" id="guava" name="favorite_fruit[]" value="guava">
+        <label for="guava">ฝรั่ง</label>
+        <input type="checkbox" id="watermelon" name="favorite_fruit[]" value="watermelon">
+        <label for="watermelon">แตงโม</label><br><br>
+
+        <label>อาหารที่ชื่นชอบ</label><br>
+        <input type="checkbox" id="grilled_chicken" name="favorite_food[]" value="grilled_chicken">
+        <label for="grilled_chicken">ต้มยำกุ้ง</label>
+        <input type="checkbox" id="fried_pork" name="favorite_food[]" value="fried_pork">
+        <label for="fried_pork">ไข่เจียวหมูสับ</label>
+        <input type="checkbox" id="fried_rice" name="favorite_food[]" value="fried_rice">
+        <label for="fried_rice">แกงไก่</label><br>
+        <input type="checkbox" id="green_curry" name="favorite_food[]" value="green_curry">
+        <label for="green_curry">แกงเขียวหวาน</label>
+        <input type="checkbox" id="pad_thai" name="favorite_food[]" value="pad_thai">
+        <label for="pad_thai">ผัดไทย</label>
+        <input type="checkbox" id="crispy_noodles" name="favorite_food[]" value="crispy_noodles">
+        <label for="crispy_noodles">ราดหน้าหมี่กรอบ</label><br><br>
+
+        <input type="submit" value="บันทึก">
+
+    </form>
+    
+</body>
+</html>
